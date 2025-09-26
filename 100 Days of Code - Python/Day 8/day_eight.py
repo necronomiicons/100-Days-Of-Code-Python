@@ -12,9 +12,7 @@ def caesar_cipher(m:str, s:int, encode_or_decode:str):
     if encode_or_decode == "encode":
         encrypted_message = ""
         for l in m:
-            if l == " ":
-                continue
-            elif not l.isalpha():
+            if not l.isalpha():
                 encrypted_message += l
                 continue
             index = characters.index(l)
