@@ -1,6 +1,8 @@
 #Blackjack
 import random
+import art
 
+print(art.blackjack)
 deck = [1, 2,3,4,5,6,7,8,9,"Joker", "Queen", "King", "Ace"]
 
 def get_card_total(a):
@@ -40,7 +42,7 @@ while new_game == 'y':
     choice = 'y'
     while choice == 'y':
         display_cards(player_cards, computer_cards)
-        choice = input("Type 'y' to draw another card. Type 'n' to pass.")
+        choice = input("Type 'y' to draw another card. Type 'n' to pass.\n")
         if choice == 'y':
             player_cards.append(deck[random.randint(0, len(deck) - 1)])
             if get_card_total(player_cards) > 21:
@@ -68,7 +70,7 @@ while new_game == 'y':
             print(f"Computer score was higher! You lose!")
         else:
             print("Tie!")
-    new_game = input("Play again? Type 'y' or 'n' :")
+    new_game = input("Play again? Type 'y' or 'n' :\n")
 
 
 
